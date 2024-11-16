@@ -1,0 +1,63 @@
+<section id="home" class="my-5">
+  <div class="container">
+    <h1>Hello, I'm Oussema</h1>
+    <p class="lead">
+      I am a second-year college student passionate about web and network
+      development, and I am seeking internship opportunities to gain practical
+      experience in the field.
+    </p>
+
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="../../assets/calc.png"
+            class="img-fluid rounded"
+            alt="Profile Picture"
+          />
+        </div>
+
+        <div class="col-md-8">
+          <h2>Web Developer</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <ul class="list-unstyled">
+            <div class="row">
+              <div class="col-md-6">
+                <li><strong>Birthday:</strong> 14 May 2004</li>
+                <li><strong>Age:</strong> 22</li>
+
+                <li><strong>Degree:</strong> licence</li>
+              </div>
+              <div class="col-md-6">
+                <li><strong>Phone:</strong> 53 121 677</li>
+                <li><strong>Email:</strong> taboubioussema78&#64;gmail.com</li>
+                <li><strong>City:</strong> Beja</li>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <a
+        *ngFor="let item of info.icons"
+        style="margin-bottom: 50px; margin: 20px"
+        class="btn btn-primary btn-lg btn-floating"
+        href="{{ item.href }}"
+        target="_blank"
+        role="button"
+        ><i [class]="item.icon"></i>
+      </a>
+    </div>
+
+    <h3 style="margin-bottom: 50px">Skills</h3>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let item of info.skills">
+        <h5>{{ item.title }}</h5>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

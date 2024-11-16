@@ -1,0 +1,41 @@
+<section id="projects" class="my-5">
+  <div class="container">
+    <h2 class="text-center">My Projects</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let item of displayedProjects">
+        <div class="card">
+          <img
+            [src]="item.image"
+            class="card-img-top"
+            alt="Project 1"
+            style="height: 250px"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text">{{ item.desc }}</p>
+            <p><strong>Technologies Used:</strong> {{ item.tech }}</p>
+            <a
+              style="margin-right: 10px"
+              [href]="item.path"
+              class="btn btn-primary"
+              target="_blank"
+              >View Live</a
+            >
+            <a [href]="item.code" class="btn btn-secondary" target="_blank"
+              >View Code</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: center">
+      <button
+        *ngIf="!showAllProjects"
+        (click)="showAllProjects = true"
+        class="btn btn-info mt-3"
+      >
+        View More
+      </button>
+    </div>
+  </div>
+</section>
